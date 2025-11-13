@@ -5,12 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/assets/index.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static/font/lucide.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frameitcss/dist/frameit.min.css">
     <title>Document</title>
 </head>
 
-<body>
+<body class="font-sans bg-gray-50 text-gray-800">
 
+    <!-- INJECT HEADER -->
+    <div id="header"></div>
+
+    <!-- ========================= -->
+    <!-- HERO SECTION -->
+    <!-- ========================= -->
+    <section class="relative h-[80vh] w-full overflow-hidden">
+        <img src="./src/assets/img/hero.jpg" alt="Firma de abogados"
+            class="frame-it clean absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center px-6 text-center">
+            <h1 data-aos="fade-up" class="text-white text-4xl md:text-6xl font-bold tracking-tight">
+                Defensa Jurídica con Excelencia
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="200" class="mt-4 text-white text-lg max-w-2xl">
+                Texto pendiente del cliente. Aquí irá el mensaje principal de la firma.
+            </p>
+
+            <a href="./src/pages/contacto.html" data-aos="fade-up" data-aos-delay="400"
+                class="mt-8 px-8 py-3 bg-white text-gray-900 font-medium rounded-lg shadow hover:bg-gray-100 transition">
+                Solicitar asesoría
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- PROPUESTA DE VALOR (CONTADORES) -->
+    <!-- ========================= -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+            <!-- Card -->
+            <div class="text-center" data-aos="fade-up">
+                <i class="lucide lucide-scale text-4xl text-primary mb-4"></i>
+                <h3 class="text-5xl font-bold counter" data-target="10">0</h3>
+                <p class="text-lg mt-2 font-medium">Años de experiencia</p>
+            </div>
+
+            <div class="text-center" data-aos="fade-up" data-aos-delay="150">
+                <i class="lucide lucide-book text-4xl text-primary mb-4"></i>
+                <h3 class="text-5xl font-bold counter" data-target="250">0</h3>
+                <p class="text-lg mt-2 font-medium">Casos resueltos</p>
+            </div>
+
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <i class="lucide lucide-users text-4xl text-primary mb-4"></i>
+                <h3 class="text-5xl font-bold counter" data-target="120">0</h3>
+                <p class="text-lg mt-2 font-medium">Clientes satisfechos</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- SERVICIOS DESTACADOS -->
+    <!-- ========================= -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
+                Nuestros Servicios Jurídicos
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Tarjeta de Servicio -->
+                <a href="./src/pages/servicios/administrativo.html"
+                    class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition block" data-aos="fade-up">
+                    <img src="./src/assets/services/administrativo/img-1.jpg"
+                        class="frame-it classic w-full h-48 object-cover rounded mb-4">
+
+                    <h3 class="text-xl font-semibold">Derecho Administrativo</h3>
+                    <p class="text-gray-600 mt-2 text-sm">
+                        Placeholder del cliente. Se reemplaza cuando recibamos textos.
+                    </p>
+                </a>
+
+                <!-- Repetir tarjeta por cada servicio -->
+                <!-- ... -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- TESTIMONIOS (placeholder) -->
+    <!-- ========================= -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold" data-aos="fade-up">Lo que dicen nuestros clientes</h2>
+            <p class="text-gray-600 mt-4" data-aos="fade-up" data-aos-delay="150">
+                (Espacio reservado. Se llenará al recibir testimonios del cliente.)
+            </p>
+        </div>
+    </section>
+
+
+    <!-- INJECT FOOTER -->
+    <div id="footer"></div>
+
+
+    <!-- SCRIPTS -->
+    <script src="./src/scripts/loader.js"></script>
+    <script src="./src/scripts/navbar.js"></script>
+    <script src="./src/scripts/sidebar.js"></script>
+    <script src="./src/scripts/counters.js"></script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

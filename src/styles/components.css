@@ -1,0 +1,82 @@
+/* Navbar hide/show */
+.navbar {
+    transition: transform .25s ease, background-color .2s ease;
+}
+
+.navbar--hidden {
+    transform: translateY(-100%);
+}
+
+/* Dropdown menu base + show (Tailwind helpers usados en HTML; aquí refuerzo) */
+.dropdown-menu.hidden {
+    display: none;
+}
+
+.dropdown-menu {
+    transition: opacity .22s ease, transform .22s ease;
+    transform-origin: top left;
+}
+
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Sidebar */
+#sidebar {
+    left: -320px;
+    /* off-canvas */
+    transition: left .32s cubic-bezier(.2, .9, .2, 1);
+    width: 320px;
+}
+
+#sidebar.sidebar--open {
+    left: 0;
+}
+
+/* Overlay */
+#sidebarOverlay {
+    transition: opacity .3s ease;
+}
+
+#sidebarOverlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#sidebarOverlay.overlay--visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Prevent page scroll when sidebar open */
+.no-scroll {
+    overflow: hidden !important;
+}
+
+/* Dropdown items */
+.dropdown__item {
+    display: block;
+    padding: .5rem .5rem;
+    border-radius: .5rem;
+    color: #111827;
+}
+
+.dropdown__item:hover {
+    background: #f8fafc;
+}
+
+/* Sidebar details summary arrow rotate */
+.sidebar__details summary {
+    list-style: none;
+}
+
+.sidebar__details summary::-webkit-details-marker {
+    display: none;
+}
+
+.sidebar__details[open] summary i {
+    transform: rotate(180deg);
+    transition: transform .25s ease;
+}
