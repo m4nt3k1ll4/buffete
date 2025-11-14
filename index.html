@@ -4,18 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/lucide-static/font/lucide.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frameitcss/dist/frameit.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1B6SZq6m1QbYl1Y9gO7z1p1XcdYtWZ1Yt5P1U2nvHgH+V6G9BPYYybJ3ybV0Pp+Ng=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- LUCIDE -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- FONT AWESOME (sin integrity) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- FRAMEIT -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frameitcss/dist/frameit.min.css"> -->
+
+    <!-- TAILWIND -->
     <link href="./src/output.css" rel="stylesheet">
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="./src/styles/components.css">
     <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/whatsapp-bubble.css">
 
     <title>Document</title>
 </head>
 
-<body class="font-sans bg-gray-50 text-gray-800">
+
+<body class="font-sans bg-background text-primary-dark">
 
     <!-- INJECT HEADER -->
     <div id="header"></div>
@@ -23,7 +36,7 @@
     <!-- ========================= -->
     <!-- HERO SECTION -->
     <!-- ========================= -->
-    <section class="relative h-[80vh] w-full overflow-hidden">
+    <section class="relative w-full overflow-hidden" style="margin-top: 80px; height: 100vh; background-color: #172345;">
         <img src="./src/assets/img/hero.jpg" alt="Firma de abogados"
             class="frame-it clean absolute inset-0 w-full h-full object-cover">
 
@@ -37,9 +50,10 @@
             </p>
 
             <a href="./src/pages/contacto.html" data-aos="fade-up" data-aos-delay="400"
-                class="mt-8 px-8 py-3 bg-white text-gray-900 font-medium rounded-lg shadow hover:bg-gray-100 transition">
-                Solicitar asesoría
+                class="mt-8 px-8 py-3 bg-primary text-white font-medium rounded-lg shadow hover:bg-accent transition">
+                Solicitar asesoría 
             </a>
+            
         </div>
     </section>
 
@@ -52,19 +66,19 @@
 
             <!-- Card -->
             <div class="text-center" data-aos="fade-up">
-                <i class="lucide lucide-scale text-4xl text-primary mb-4"></i>
+                <i data-lucide="scale" class="text-4xl text-primary mb-4"></i>
                 <h3 class="text-5xl font-bold counter" data-target="10">0</h3>
                 <p class="text-lg mt-2 font-medium">Años de experiencia</p>
             </div>
 
             <div class="text-center" data-aos="fade-up" data-aos-delay="150">
-                <i class="lucide lucide-book text-4xl text-primary mb-4"></i>
+                <i data-lucide="book" class="text-4xl text-primary mb-4"></i>
                 <h3 class="text-5xl font-bold counter" data-target="250">0</h3>
                 <p class="text-lg mt-2 font-medium">Casos resueltos</p>
             </div>
 
             <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                <i class="lucide lucide-users text-4xl text-primary mb-4"></i>
+                <i data-lucide="users" class="text-4xl text-primary mb-4"></i>
                 <h3 class="text-5xl font-bold counter" data-target="120">0</h3>
                 <p class="text-lg mt-2 font-medium">Clientes satisfechos</p>
             </div>
@@ -120,12 +134,20 @@
     <!-- INJECT FOOTER -->
     <div id="footer"></div>
 
+    <!-- INJECT WHATSAPP BUBBLE -->
+    <div id="whatsappBubble"></div>
+
 
     <!-- SCRIPTS -->
     <script src="./src/scripts/loader.js"></script>
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>
+        AOS.init();
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
 </body>
 
 </html>

@@ -1,16 +1,24 @@
 
 const navbar = document.querySelector(".navbar");
-// sticky hide/show on scroll
-let prevScroll = window.scrollY || 0;
-window.addEventListener("scroll", () => {
-    const current = window.scrollY || 0;
-    if (current > prevScroll && current > 80) {
-        navbar.classList.add("navbar--hidden");
+
+// Keep navbar visible at all times; instead, toggle a style when it's over the hero
+function updateNavbarOnHero() {
+    const hero = document.querySelector('section'); // first section is hero
+    if (!hero || !navbar) return;
+    const headerHeight = navbar.offsetHeight || 80;
+    const heroRect = hero.getBoundingClientRect();
+    // if the hero bottom is below headerHeight, navbar is overlapping the hero
+    if (heroRect.bottom > headerHeight + 10) {
+        navbar.classList.add('navbar--on-hero');
     } else {
-        navbar.classList.remove("navbar--hidden");
+        navbar.classList.remove('navbar--on-hero');
     }
-    prevScroll = current;
-});
+}
+
+window.addEventListener('scroll', updateNavbarOnHero, { passive: true });
+window.addEventListener('resize', updateNavbarOnHero);
+// initial check
+setTimeout(updateNavbarOnHero, 100);
 
 // DROPDOWN: busca elementos con data-dropdown
 document.querySelectorAll("[data-dropdown]").forEach(btn => {

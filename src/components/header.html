@@ -1,4 +1,4 @@
-<header class="navbar fixed top-0 w-full bg-white/80 backdrop-blur z-50 shadow-sm">
+<header class="navbar fixed top-0 w-full bg-background/95 backdrop-blur z-50 shadow-sm border-b border-secondary/20">
     
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
 
@@ -15,68 +15,59 @@
                 <button class="nav__link inline-flex items-center gap-2" data-dropdown="serviciosMenu"
                     aria-expanded="false" aria-controls="serviciosMenu">
                     Servicios
-                    <i class="lucide lucide-chevron-down" aria-hidden="true"></i>
+                    <i data-lucide="chevron-down" aria-hidden="true"></i>
                 </button>
 
                 <div id="serviciosMenu"
-                    class="dropdown-menu absolute left-0 mt-3 w-72 bg-white shadow-lg rounded-lg p-2 hidden flex flex-col"
+                    class="dropdown-menu absolute left-0 mt-3 w-72 bg-background shadow-lg rounded-lg p-2 hidden"
                     role="menu" aria-hidden="true">
 
                     <a href="/src/pages/servicios/administrativo.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Derecho
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Derecho
                         Administrativo</a>
                     <a href="/src/pages/servicios/contratacion-estatal.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Contratación
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Contratación
                         Estatal</a>
                     <a href="/src/pages/servicios/policivo-urbanistico.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Policivo
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Policivo
                         &
                         Urbanístico</a>
                     <a href="/src/pages/servicios/laboral.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Laboral</a>
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Laboral</a>
                     <a href="/src/pages/servicios/comercial.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Comercial</a>
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Comercial</a>
                     <a href="/src/pages/servicios/societario.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Societario</a>
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Societario</a>
                     <a href="/src/pages/servicios/ambiental.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Ambiental</a>
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Ambiental</a>
                     <a href="/src/pages/servicios/familiar.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Familiar</a>
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Familiar</a>
                     <a href="/src/pages/servicios/tributario.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Tributario</a>
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Tributario</a>
                     <a href="/src/pages/servicios/responsabilidad-civil.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Responsabilidad
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Responsabilidad
                         Civil</a>
                     <a href="/src/pages/servicios/propiedad-intelectual.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Propiedad
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Propiedad
                         Intelectual</a>
                     <a href="/src/pages/servicios/sucesiones.html"
-                        class="block w-full px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 hover:text-primary transition-colors">Sucesiones</a>
+                        class="block w-full px-4 py-2 text-sm text-primary-dark rounded-md hover:bg-secondary/10 hover:text-primary transition-colors">Sucesiones</a>
                 </div>
             </div>
 
             <a href="/src/pages/tejido-social.html" class="nav__link">Tejido Social</a>
-            <a href="/src/pages/contacto.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg 
-            bg-primary text-gray-900 
-            font-medium shadow-md 
-            transition-all duration-300 
-            hover:shadow-xl hover:scale-105">
-                <i class="lucide lucide-phone"></i> Agendar cita
-            </a>
+            <a href="/src/pages/contacto.html" class="nav__link">Contacto</a>
         </nav>
 
+        <!-- Right actions: keep only CTA for desktop -->
         <div class="hidden md:flex items-center gap-4">
-            <button class="p-2 rounded-md hover:bg-gray-100" aria-label="Buscar">
-                <i class="lucide lucide-search text-lg"></i>
-            </button>
-
-            <a href="https://wa.me/573001234567" class="p-2 rounded-md hover:bg-gray-100" aria-label="WhatsApp">
-                <i class="lucide lucide-message-square text-2xl" style="color:#25D366"></i>
+            <a href="/src/pages/contacto.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-medium shadow-md transition-all duration-300 hover:bg-accent">
+                <i data-lucide="phone"></i> Agendar cita
             </a>
         </div>
 
         <button id="openSidebar" class="md:hidden p-2" aria-label="Abrir menú">
-            <i class="lucide lucide-menu text-3xl"></i>
+            <i data-lucide="menu" class="text-3xl"></i>
         </button>
     </div>
 
@@ -86,7 +77,7 @@
         <div class="flex items-center justify-between px-6 h-20 border-b">
             <img src="/src/assets/img/logo.svg" class="h-12" alt="Logo">
             <button id="closeSidebar" aria-label="Cerrar menú" class="p-2">
-                <i class="lucide lucide-x text-3xl"></i>
+                <i data-lucide="x" class="text-3xl"></i>
             </button>
         </div>
 
@@ -98,7 +89,7 @@
             <details class="sidebar__details">
                 <summary class="flex items-center justify-between py-2 cursor-pointer sidebar__summary">
                     Servicios
-                    <i class="lucide lucide-chevron-down"></i>
+                    <i data-lucide="chevron-down"></i>
                 </summary>
                 <div class="pl-4 mt-2 flex flex-col gap-2">
                     <a href="/src/pages/servicios/administrativo.html" class="sidebar__sublink">Administrativo</a>

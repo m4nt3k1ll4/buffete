@@ -1,0 +1,43 @@
+<!-- WhatsApp Bubble Component -->
+<div id="whatsappBubble" class="whatsapp-bubble">
+    <!-- Chat Container (oculto por defecto) -->
+    <div class="whatsapp-chat-container hidden">
+        <!-- Header del Chat -->
+        <div class="whatsapp-chat-header">
+            <div class="flex items-center gap-3">
+                <img src="/src/assets/img/logo.svg" alt="Quiroga Abogados" class="w-10 h-10 rounded-full">
+                <div>
+                    <p class="font-semibold text-white text-sm">Quiroga Abogados</p>
+                    <p class="text-xs text-green-200">Responderemos pronto</p>
+                </div>
+            </div>
+            <button id="closeWhatsappChat" aria-label="Cerrar chat" class="p-1">
+                <i data-lucide="x" class="text-white"></i>
+            </button>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="whatsapp-messages">
+            <div class="whatsapp-message bot">
+                <p>¡Hola! 👋</p>
+            </div>
+            <div class="whatsapp-message bot">
+                <p>¿En qué podemos ayudarte? Contacta con nosotros ahora.</p>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="whatsapp-input-area">
+            <a href="https://wa.me/573001234567?text=Hola,%20me%20gustaría%20más%20información%20sobre%20los%20servicios%20de%20Quiroga%20Abogados."
+                class="whatsapp-send-btn">
+                Iniciar conversación
+                <i data-lucide="send" class="text-lg"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bubble Button (siempre visible) -->
+    <button id="whatsappBubbleBtn" class="whatsapp-bubble-btn" aria-label="Abrir WhatsApp">
+        <i data-lucide="message-circle" class="text-2xl"></i>
+    </button>
+</div>

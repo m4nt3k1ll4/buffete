@@ -1,6 +1,13 @@
 /* Navbar hide/show */
 .navbar {
     transition: transform .25s ease, background-color .2s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: 80px;
+    background: #FAFCFF; /* default: broken white */
 }
 
 .navbar--hidden {
@@ -23,16 +30,20 @@
     transform: translateY(0) scale(1);
 }
 
-/* Sidebar */
+/* Sidebar (use transform for smoother mobile behavior) */
 #sidebar {
-    left: -320px;
-    /* off-canvas */
-    transition: left .32s cubic-bezier(.2, .9, .2, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 320px;
+    transform: translateX(-100%);
+    transition: transform .32s cubic-bezier(.2, .9, .2, 1);
+    z-index: 60; /* ensure sidebar is above header on mobile */
 }
 
 #sidebar.sidebar--open {
-    left: 0;
+    transform: translateX(0);
 }
 
 /* Overlay */
@@ -63,6 +74,71 @@
     color: #111827;
 }
 
+/* Nav link styles and states */
+.nav__link {
+    color: #172345; /* primary-dark */
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    transition: color .2s ease, background-color .2s ease;
+}
+
+/* When navbar sits on top of the hero (dark background) */
+.navbar--on-hero {
+    background: #172345 !important; /* solid dark so it stands out */
+    border-bottom-color: rgba(255,255,255,0.06);
+}
+
+.navbar--on-hero .nav__link {
+    color: #ffffff !important;
+}
+
+/* Ensure CTA buttons in navbar are solid and visible */
+.navbar .inline-flex.bg-primary {
+    background: #BE8B51 !important;
+    color: #ffffff !important;
+}
+
+/* Make sure dropdown background adapts when navbar is on hero */
+.navbar--on-hero .dropdown-menu {
+    background: #ffffff; /* show white dropdown over dark header */
+    color: #172345;
+}
+
+/* Utility to ensure primary color works even if Tailwind output wasn't rebuilt */
+.bg-primary {
+    background-color: #BE8B51 !important;
+    color: #ffffff !important;
+}
+.hover\:bg-accent:hover {
+    background-color: #DBBAB1 !important;
+}
+
+/* Button reset to avoid transparent look where specificity causes issues */
+.btn, .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .65rem 1rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    background-color: #BE8B51;
+    color: #fff;
+    border: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    /* Reduce hero text size on small screens */
+    .hero-title {
+        font-size: 2rem;
+    }
+    .navbar .max-w-7xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 .dropdown__item:hover {
     background: #f8fafc;
 }
@@ -79,4 +155,9 @@
 .sidebar__details[open] summary i {
     transform: rotate(180deg);
     transition: transform .25s ease;
+}
+i, .fa, .fa-solid, .fa-brands, .fa-regular, .lucide {
+    font-style: normal !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Lucide Icons" !important;
+    font-weight: 900 !important;
 }

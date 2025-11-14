@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+i, .fa, .fa-solid, .fa-brands, .fa-regular, .lucide {
+    font-style: normal !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Lucide Icons" !important;
+    font-weight: 900 !important;
+}
