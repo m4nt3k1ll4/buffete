@@ -147,6 +147,21 @@
         if (window.lucide) {
             lucide.createIcons();
         }
+        
+        // Ajustar margin-top del hero según el navbar en móviles pequeños
+        function adjustHeroMargin() {
+            const navbar = document.querySelector('.navbar');
+            const hero = document.querySelector('section.relative[style*="margin-top"]');
+            
+            if (navbar && hero && window.innerWidth <= 480) {
+                const navbarHeight = navbar.offsetHeight || 70;
+                hero.style.marginTop = navbarHeight + 'px';
+            }
+        }
+        
+        // Ejecutar al cargar y redimensionar
+        setTimeout(adjustHeroMargin, 300);
+        window.addEventListener('resize', adjustHeroMargin);
     </script>
 </body>
 

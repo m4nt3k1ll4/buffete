@@ -1,4 +1,3 @@
-
 const navbar = document.querySelector(".navbar");
 
 // Keep navbar visible at all times; instead, toggle a style when it's over the hero
@@ -41,15 +40,28 @@ document.querySelectorAll("[data-dropdown]").forEach(btn => {
         });
 
         if (!isOpen) {
+            // Calcular posición horizontal del botón
+            const btnRect = btn.getBoundingClientRect();
+            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+            
+            menu.style.left = btnRect.left + 'px';
+            menu.style.top = (navbarHeight + 5) + 'px';
+            
             menu.classList.add("show");
             menu.classList.remove("hidden");
             menu.setAttribute("aria-hidden", "false");
             btn.setAttribute("aria-expanded", "true");
+            // Animate chevron
+            const chevron = btn.querySelector('.navbar__chevron');
+            if (chevron) chevron.classList.add('rotate');
         } else {
             menu.classList.remove("show");
             menu.classList.add("hidden");
             menu.setAttribute("aria-hidden", "true");
             btn.setAttribute("aria-expanded", "false");
+            // Animate chevron
+            const chevron = btn.querySelector('.navbar__chevron');
+            if (chevron) chevron.classList.remove('rotate');
         }
     });
 });
@@ -66,10 +78,15 @@ document.addEventListener("click", () => {
 });
 
 // abrir sidebar: emitir evento global para sidebar.js
-document.querySelectorAll("#openSidebar").forEach(btn => {
-    btn.addEventListener("click", () => {
+// Usamos delegación para soportar elementos inyectados dinámicamente
+document.addEventListener("click", (e) => {
+    // Si el click ocurrió dentro de un elemento con id openSidebar
+    const openBtn = e.target.closest && e.target.closest('#openSidebar');
+    if (openBtn) {
+        e.preventDefault();
+        e.stopPropagation();
         document.dispatchEvent(new Event("sidebar:open"));
-    });
+    }
 });
 
 

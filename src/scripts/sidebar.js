@@ -6,32 +6,83 @@ const closeBtn = document.getElementById("closeSidebar");
 const overlay = document.getElementById("sidebarOverlay");
 
 const open = () => {
-    sidebar.classList.add("sidebar--open");
-    sidebar.removeAttribute("aria-hidden");
-    overlay.classList.remove("hidden");
+    if (sidebar) {
+        sidebar.classList.add("sidebar--open");
+        sidebar.setAttribute("aria-hidden", "false");
+    }
+    if (overlay) {
+        overlay.classList.remove("hidden");
+        overlay.classList.add("overlay--visible");
+    }
     document.body.classList.add("no-scroll");
-    overlay.classList.add("overlay--visible");
 };
 
 const close = () => {
-    sidebar.classList.remove("sidebar--open");
-    sidebar.setAttribute("aria-hidden", "true");
-    overlay.classList.add("hidden");
+    if (sidebar) {
+        sidebar.classList.remove("sidebar--open");
+        sidebar.setAttribute("aria-hidden", "true");
+    }
+    if (overlay) {
+        overlay.classList.remove("overlay--visible");
+        overlay.classList.add("hidden");
+    }
     document.body.classList.remove("no-scroll");
-    overlay.classList.remove("overlay--visible");
 };
 
 // escucha evento disparado desde navbar.js
 document.addEventListener("sidebar:open", open);
 
-// botones directos
-openBtns.forEach(b => b.addEventListener("click", open));
-closeBtn?.addEventListener("click", close);
-overlay?.addEventListener("click", close);
+// botones directos (si existen)
+if (openBtns.length > 0) {
+    openBtns.forEach((b) => {
+        b.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            open();
+        });
+    });
+}
+
+if (closeBtn) {
+    closeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+    });
+}
+
+if (overlay) {
+    overlay.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+    });
+}
+
+// Fallback: delegación para clicks sobre el botón #openSidebar
+document.addEventListener("click", (e) => {
+    const openBtn = e.target.closest && e.target.closest('#openSidebar');
+    if (openBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (sidebar && !sidebar.classList.contains('sidebar--open')) {
+            open();
+        }
+    }
+});
 
 // ESC para cerrar
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
+});
+
+// Cierra el sidebar cuando se hace click en un link dentro de él
+document.addEventListener("click", (e) => {
+    const sidebarLink = e.target.closest && e.target.closest('.sidebar__link, .sidebar__sublink, .sidebar__btn');
+    if (sidebarLink && sidebar && sidebar.classList.contains('sidebar--open')) {
+        // Espera un pequeño delay para permitir la navegación sin flickering
+        setTimeout(() => close(), 100);
+    }
 });
 
 // Mejora del comportamiento collapsible en sidebar: <details> nativo ya funciona,

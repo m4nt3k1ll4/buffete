@@ -39,11 +39,15 @@ function loadScript(src) {
  */
 async function main() {
     // 1. Carga el HTML del header, footer y whatsapp bubble al mismo tiempo
-    await Promise.all([
-        loadComponent("header", "header.html"),
-        loadComponent("footer", "footer.html"),
-        loadComponent("whatsappBubble", "whatsapp-bubble.html")
-    ]);
+    try {
+        await Promise.all([
+            loadComponent("header", "header.html"),
+            loadComponent("footer", "footer.html"),
+            loadComponent("whatsappBubble", "whatsapp-bubble.html")
+        ]);
+    } catch (error) {
+        console.error("Error al cargar componentes HTML:", error);
+    }
 
     // 2. SOLO CUANDO el HTML ya está en la página, carga los scripts
     //    que dependen de ese HTML (en orden).
@@ -55,7 +59,9 @@ async function main() {
         
         // 3. Carga y activa AOS (animaciones)
         await loadScript("https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js");
-        AOS.init();
+        if (window.AOS) {
+            AOS.init();
+        }
         
         // 4. Renderiza los iconos de Lucide después de que todo esté en el DOM
         if (window.lucide) {
@@ -63,7 +69,7 @@ async function main() {
         }
         
     } catch (error) {
-        console.error("Fallo al cargar los scripts principales:", error);
+        console.error("Error al cargar los scripts principales:", error);
     }
 }
 
