@@ -46,9 +46,9 @@ async function main() {
     // 1. Carga el HTML del header, footer y whatsapp bubble al mismo tiempo
     try {
         await Promise.all([
-            loadComponent("header", "../components/header.html"),
-            loadComponent("footer", "../components/footer.html"),
-            loadComponent("whatsappBubble", "../components/whatsapp-bubble.html")
+            loadComponent("header", "header.html"),
+            loadComponent("footer", "footer.html"),
+            loadComponent("whatsappBubble", "whatsapp-bubble.html")
         ]);
     } catch (error) {
         console.error("Error al cargar componentes HTML:", error);
@@ -57,10 +57,10 @@ async function main() {
     // 2. SOLO CUANDO el HTML ya está en la página, carga los scripts
     //    que dependen de ese HTML (en orden).
     try {
-        await loadScript("./src/scripts/navbar.js");
-        await loadScript("./src/scripts/sidebar.js");
-        await loadScript("./src/scripts/counters.js");
-        await loadScript("./src/scripts/whatsapp-bubble.js");
+        await loadScript("src/scripts/navbar.js");
+        await loadScript("src/scripts/sidebar.js");
+        await loadScript("src/scripts/counters.js");
+        await loadScript("src/scripts/whatsapp-bubble.js");
         
         // 3. Carga y activa AOS (animaciones)
         await loadScript("https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js");
