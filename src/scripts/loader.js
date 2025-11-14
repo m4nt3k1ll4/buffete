@@ -1,17 +1,30 @@
 // src/scripts/loader.js
 
 /**
+ * Obtiene la ruta base (funciona en local y en GitHub Pages)
+ */
+function getBasePath() {
+    const path = window.location.pathname;
+    // Si la URL contiene /buffete/, es GitHub Pages
+    if (path.includes('/buffete/')) {
+        return '/buffete';
+    }
+    return '';
+}
+
+/**
  * Carga un componente HTML (header/footer) en un elemento del DOM.
- * Usa rutas absolutas para que funcione desde cualquier página.
+ * Funciona tanto en local como en GitHub Pages.
  */
 async function loadComponent(id, file) {
     const el = document.getElementById(id);
     if (!el) return;
 
     try {
+        const basePath = getBasePath();
         const url = file.startsWith("/") 
             ? file 
-            : `/src/components/${file}`;
+            : `${basePath}/src/components/${file}`;
 
         const res = await fetch(url);
         if (!res.ok) throw new Error(`Error 404: ${url} no encontrado.`);
@@ -26,13 +39,18 @@ async function loadComponent(id, file) {
 
 /**
  * Carga un script dinámicamente y espera a que esté listo.
- * Usa rutas absolutas.
+ * Funciona tanto en local como en GitHub Pages.
  */
 function loadScript(src) {
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
-        // Si es un CDN, déjalo como está. Si es local, ponle la ruta absoluta.
-        script.src = src.startsWith('http') ? src : `/${src}`;
+        // Si es un CDN, déjalo como está. Si es local, ajusta la ruta base.
+        if (src.startsWith('http')) {
+            script.src = src;
+        } else {
+            const basePath = getBasePath();
+            script.src = `${basePath}/${src}`;
+        }
         script.onload = () => resolve();
         script.onerror = () => reject(new Error(`Error al cargar el script ${src}`));
         document.body.appendChild(script);
