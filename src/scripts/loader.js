@@ -6,18 +6,23 @@
  */
 async function loadComponent(id, file) {
     const el = document.getElementById(id);
-    if (el) {
-        try {
-            // Usamos una ruta absoluta (ej: /src/components/header.html)
-            const res = await fetch(`/src/components/${file}`);
-            if (!res.ok) throw new Error(`Error 404: ${file} no encontrado.`);
-            el.innerHTML = await res.text();
-        } catch (error) {
-            console.error(`Error al cargar ${file}:`, error);
-            el.innerHTML = `<p style="color:red; text-align:center;">Error al cargar ${id}.</p>`;
-        }
+    if (!el) return;
+
+    try {
+        const url = file.startsWith("/") 
+            ? file 
+            : `/src/components/${file}`;
+
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Error 404: ${url} no encontrado.`);
+
+        el.innerHTML = await res.text();
+    } catch (error) {
+        console.error(`Error al cargar ${file}:`, error);
+        el.innerHTML = `<p style="color:red; text-align:center;">Error al cargar ${id}.</p>`;
     }
 }
+
 
 /**
  * Carga un script dinámicamente y espera a que esté listo.
