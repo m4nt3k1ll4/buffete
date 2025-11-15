@@ -14,6 +14,17 @@
     transform: translateY(-100%);
 }
 
+/* Logo en navbar - ajustar tamaño en móvil */
+.navbar img[alt="Quiroga Abogados"] {
+    height: 3.5rem; /* h-14 */
+}
+
+@media (max-width: 768px) {
+    .navbar img[alt="Quiroga Abogados"] {
+        height: 2.5rem; /* h-10 para móviles */
+    }
+}
+
 /* Dropdown menu base + show (Tailwind helpers usados en HTML; aquí refuerzo) */
 .dropdown-menu.hidden {
     display: none !important;
@@ -225,7 +236,7 @@
     }
     
     .navbar a img {
-        height: 10px !important;
+        height: 10 !important;
         width: auto;
     }
     
@@ -514,4 +525,13 @@ section.relative h1 {
 /* Hero p con shadow suave */
 section.relative p {
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================= */
+/* HERO BACKGROUND IMAGE BLUR */
+/* ============================= */
+
+/* Blur ligero en la imagen de hero */
+section.relative > img {
+    filter: blur(2px);
 }
