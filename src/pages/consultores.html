@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Consultores — Quiroga Abogados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red de Consultores — Quiroga Abogados</title>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="../output.css" rel="stylesheet">
@@ -11,13 +12,269 @@
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/whatsapp-bubble.css">
 </head>
+
 <body class="font-sans bg-background text-primary-dark">
     <div id="header"></div>
 
-    <main class="max-w-6xl mx-auto p-6">
-        <h1 class="text-2xl font-bold mb-4">Consultores</h1>
-        <p>Contenido de la página 'Consultores' pendiente.</p>
-    </main>
+    <!-- ========================= -->
+    <!-- HERO SECTION -->
+    <!-- ========================= -->
+    <section class="relative w-full overflow-hidden" style="height: 100vh; background: linear-gradient(135deg, #172345 0%, #1a2a4a 50%, #BE8B51 100%);">
+        <img src="../assets/img/hero.jpg" alt="Red de Consultores"
+            class="frame-it absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center px-6 text-center">
+            <h1 data-aos="fade-up" class="text-white text-4xl md:text-6xl font-bold tracking-tight">
+                Red de Consultores Especializados
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="200" class="mt-4 text-white text-lg max-w-3xl leading-relaxed">
+                Conectamos profesionales de distintas disciplinas para ofrecer soluciones integrales a nuestros clientes. Somos una red colaborativa donde la excelencia y la especialización se encuentran.
+            </p>
+
+            <div data-aos="fade-up" data-aos-delay="400" class="mt-8">
+                <a href="contacto.html" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-lg font-semibold shadow-lg hover:bg-accent transition-all duration-300">
+                    <i data-lucide="phone"></i> Conocer Más
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SECCIÓN INTRODUCTORIA: 3 PÁRRAFOS -->
+    <!-- ========================= -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="space-y-8">
+                <p data-aos="fade-up" class="text-lg text-gray-700 leading-relaxed">
+                    Nuestra red de consultores está integrada por profesionales altamente especializados de diversos sectores. Cada miembro aporta su experticia y experiencia para brindar a nuestros clientes soluciones comprensivas que van más allá de la asesoría legal tradicional.
+                </p>
+
+                <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-gray-700 leading-relaxed">
+                    Creemos en el poder de la colaboración interdisciplinaria. Al unir fuerzas con ingenieros ambientales, civiles, arquitectos, contadores y especialistas financieros, generamos enfoques innovadores que resuelven los desafíos más complejos de nuestros clientes.
+                </p>
+
+                <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-700 leading-relaxed">
+                    Somos más que consultores independientes: somos un ecosistema de profesionales comprometidos con la excelencia, la integridad y el éxito mutuo. Cada proyecto es una oportunidad para demostrar que juntos podemos lograr resultados extraordinarios.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SECCIÓN DE ENFOQUE: 4 PUNTOS CON ICONOS -->
+    <!-- ========================= -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-aos="fade-up">
+                Nuestro Enfoque
+            </h2>
+            <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="100">
+                Operamos bajo principios fundamentales que guían cada una de nuestras acciones y decisiones.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Punto 1: Colaboración -->
+                <div data-aos="fade-up" class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-primary shrink-0 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-primary-dark">Colaboración Integral</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Trabajamos en equipos multidisciplinarios para abordar cada proyecto desde múltiples perspectivas, asegurando soluciones completas y coherentes que satisfacen todas las dimensiones del problema.
+                    </p>
+                </div>
+
+                <!-- Punto 2: Especialización -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <i data-lucide="award" class="w-8 h-8 text-primary shrink-0 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-primary-dark">Experticia Especializada</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cada profesional en nuestra red es un experto en su campo. Contamos con profesionales certificados y con amplia experiencia que garantizan la calidad de nuestros servicios.
+                    </p>
+                </div>
+
+                <!-- Punto 3: Innovación -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <i data-lucide="lightbulb" class="w-8 h-8 text-primary shrink-0 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-primary-dark">Soluciones Innovadoras</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Nos enfocamos en encontrar soluciones creativas y modernas que van más allá de lo convencional. La innovación es el corazón de nuestro trabajo colaborativo.
+                    </p>
+                </div>
+
+                <!-- Punto 4: Resultados -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <i data-lucide="target" class="w-8 h-8 text-primary shrink-0 mt-1"></i>
+                        <h3 class="text-2xl font-bold text-primary-dark">Enfoque en Resultados</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Nuestro objetivo es claro: lograr los mejores resultados posibles para nuestros clientes. Cada acción que tomamos está orientada hacia el éxito integral del proyecto.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Botón CTA -->
+            <div class="flex justify-center mt-16" data-aos="fade-up" data-aos-delay="400">
+                <a href="contacto.html" class="inline-flex items-center gap-3 px-12 py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-lg hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                    <i data-lucide="user-plus"></i> Sé Parte de Nuestro Equipo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SECCIÓN RED TÉCNICA Y PROFESIONAL -->
+    <!-- ========================= -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-aos="fade-up">
+                Red Técnica y Profesional
+            </h2>
+            <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="100">
+                Nuestros consultores especializados en:
+            </p>
+
+            <div class="space-y-4">
+                <!-- Ingenieros Ambientales -->
+                <details class="group border-2 border-gray-200 rounded-lg" data-aos="fade-up">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="leaf" class="w-6 h-6 text-primary"></i>
+                            <h3 class="text-xl font-bold text-primary-dark">Ingenieros Ambientales</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-primary group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 border-t-2 border-gray-200 bg-white">
+                        <p class="text-gray-700 leading-relaxed">
+                            Expertos en impacto ambiental, compliance normativo, auditorías ambientales y soluciones sostenibles. Nuestros ingenieros ambientales trabajan para asegurar que tus proyectos cumplan con todas las regulaciones ambientales y contribuyan a un futuro más sostenible.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- Ingenieros Civiles -->
+                <details class="group border-2 border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="building-2" class="w-6 h-6 text-primary"></i>
+                            <h3 class="text-xl font-bold text-primary-dark">Ingenieros Civiles</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-primary group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 border-t-2 border-gray-200 bg-white">
+                        <p class="text-gray-700 leading-relaxed">
+                            Especialistas en infraestructura, diseño estructural, supervisión de obras y gestión de proyectos de construcción. Garantizamos que tus proyectos se ejecuten con la máxima calidad y dentro de los plazos establecidos.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- Arquitectos -->
+                <details class="group border-2 border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="square" class="w-6 h-6 text-primary"></i>
+                            <h3 class="text-xl font-bold text-primary-dark">Arquitectos</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-primary group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 border-t-2 border-gray-200 bg-white">
+                        <p class="text-gray-700 leading-relaxed">
+                            Creativos y visionarios en diseño arquitectónico, planificación urbana y conceptualización de espacios. Nuestros arquitectos transforman ideas en diseños funcionales y hermosos que se adaptan a tus necesidades.
+                        </p>
+                    </div>
+                </details>
+
+                <!-- Contadores y Especialistas Financieros -->
+                <details class="group border-2 border-gray-200 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 bg-gray-50 hover:bg-gray-100 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="calculator" class="w-6 h-6 text-primary"></i>
+                            <h3 class="text-xl font-bold text-primary-dark">Contadores y Especialistas Financieros</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-primary group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="p-6 border-t-2 border-gray-200 bg-white">
+                        <p class="text-gray-700 leading-relaxed">
+                            Expertos en contabilidad, auditoría, asesoría fiscal, análisis financiero y planeamiento tributario. Nuestros profesionales te ayudan a optimizar tu situación financiera y aseguran el cumplimiento de tus obligaciones tributarias.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SECCIÓN: QUÉ TE OFRECEMOS COMO ASOCIADO -->
+    <!-- ========================= -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6" data-aos="fade-up">
+                ¿Qué te Ofrecemos como Asociado?
+            </h2>
+            <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="100">
+                Como miembro de nuestra red, accedes a beneficios exclusivos diseñados para potenciar tu carrera profesional y expandir tus oportunidades.
+            </p>
+
+            <div class="space-y-6">
+                <!-- Oportunidades de Negocio -->
+                <div data-aos="fade-up" class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full font-bold shrink-0">
+                            1
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary-dark mb-3">Oportunidades de Negocio</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Acceso a proyectos y clientes de alto valor. Participarás en iniciativas que te permiten expandir tu portafolio profesional, generar ingresos adicionales y establecer relaciones comerciales sólidas y duraderas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visibilidad y Posicionamiento -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full font-bold shrink-0">
+                            2
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary-dark mb-3">Visibilidad y Posicionamiento</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Promoción de tu expertise a través de nuestra red. Te posicionaremos como especialista ante nuestro base de clientes, aumentando tu reputación profesional y generando nuevas oportunidades de referidos y colaboraciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trabajo Colaborativo -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full font-bold shrink-0">
+                            3
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary-dark mb-3">Trabajo Colaborativo</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Colaboración con profesionales de diferentes disciplinas. Intercambia conocimientos, aprende de expertos en otras áreas, y desarrolla soluciones integrales que generan mayor valor para los clientes y para ti.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Final -->
+            <div class="flex justify-center mt-16" data-aos="fade-up" data-aos-delay="300">
+                <a href="contacto.html" class="inline-flex items-center gap-3 px-12 py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-lg hover:bg-accent transition-all duration-300 transform hover:scale-105">
+                    <i data-lucide="mail"></i> Contáctanos para Unirte
+                </a>
+            </div>
+        </div>
+    </section>
 
     <div id="footer"></div>
     <div id="whatsappBubble"></div>
@@ -27,6 +284,14 @@
     <script>
         AOS.init();
         if (window.lucide) lucide.createIcons();
+
+        // Actualizar iconos de chevron cuando se abren/cierren details
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                lucide.createIcons();
+            });
+        });
     </script>
 </body>
+
 </html>
