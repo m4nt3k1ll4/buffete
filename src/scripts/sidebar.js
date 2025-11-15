@@ -5,10 +5,41 @@ const openBtns = document.querySelectorAll("#openSidebar");
 const closeBtn = document.getElementById("closeSidebar");
 const overlay = document.getElementById("sidebarOverlay");
 
+/**
+ * Detecta si el viewport está en la sección hero y ajusta el color del sidebar
+ */
+function updateSidebarColor() {
+    if (!sidebar) return;
+    
+    // Obtener el primer elemento main o section con clase hero/relative
+    const heroSection = document.querySelector('section.relative[style*="height: 100vh"]') || 
+                        document.querySelector('section[style*="background: linear-gradient"]');
+    
+    if (!heroSection) {
+        // Si no hay hero, remover clase oscura
+        sidebar.classList.remove('sidebar--dark');
+        return;
+    }
+    
+    const heroHeight = heroSection.offsetHeight || window.innerHeight;
+    const scrollPosition = window.scrollY;
+    
+    // Si estamos en la sección hero (dentro de los primeros 100vh aproximadamente)
+    if (scrollPosition < heroHeight * 0.8) {
+        // Color del hero: agregar clase oscura
+        sidebar.classList.add('sidebar--dark');
+    } else {
+        // Color de la navbar cuando estamos en el contenido
+        sidebar.classList.remove('sidebar--dark');
+    }
+}
+
 const open = () => {
     if (sidebar) {
         sidebar.classList.add("sidebar--open");
         sidebar.setAttribute("aria-hidden", "false");
+        // Actualizar color al abrir
+        updateSidebarColor();
     }
     if (overlay) {
         overlay.classList.remove("hidden");
@@ -28,6 +59,13 @@ const close = () => {
     }
     document.body.classList.remove("no-scroll");
 };
+
+// Actualizar color de sidebar cuando se hace scroll (mientras está cerrado)
+document.addEventListener("scroll", () => {
+    if (sidebar && !sidebar.classList.contains("sidebar--open")) {
+        updateSidebarColor();
+    }
+}, { passive: true });
 
 // escucha evento disparado desde navbar.js
 document.addEventListener("sidebar:open", open);
@@ -111,4 +149,3 @@ document.querySelectorAll(".sidebar__details").forEach(details => {
         }
     });
 });
-
