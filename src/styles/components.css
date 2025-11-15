@@ -329,3 +329,81 @@ i, .fa, .fa-solid, .fa-brands, .fa-regular, .lucide {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Lucide Icons" !important;
     font-weight: 900 !important;
 }
+
+/* ============================= */
+/* SERVICE CARDS STYLING */
+/* ============================= */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+/* Fondo con imagen (hidden por defecto) */
+.service-card__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+/* Contenido visible encima del fondo */
+.service-card__content {
+    background: white;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Efecto hover: mostrar fondo de imagen */
+.service-card:hover .service-card__bg {
+    opacity: 0.15;
+}
+
+/* Efecto hover: oscurecer el contenido */
+.service-card:hover .service-card__content {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Animación de elevación y sombra */
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Estilo para los textos dentro de la tarjeta */
+.service-card h3 {
+    transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+    color: #BE8B51;
+}
+
+/* Animación del enlace "Más información" */
+.service-card a {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover a {
+    gap: 0.75rem;
+}
+
+.service-card:hover a i {
+    transform: translateX(3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-card {
+        transform: translateY(0) !important;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-4px);
+    }
+}
