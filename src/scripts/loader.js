@@ -75,6 +75,7 @@ async function main() {
     // 2. SOLO CUANDO el HTML ya está en la página, carga los scripts
     //    que dependen de ese HTML (en orden).
     try {
+        await loadScript("src/scripts/route-handler.js");
         await loadScript("src/scripts/navbar.js");
         await loadScript("src/scripts/sidebar.js");
         await loadScript("src/scripts/counters.js");
