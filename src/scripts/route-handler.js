@@ -13,7 +13,8 @@ function getBasePath() {
 }
 
 /**
- * Convierte rutas relativas a absolutas basadas en la base path
+ * Convertir rutas relativas a absolutas basadas en la base path
+ * index.html está en la raíz, todo lo demás en src/
  */
 function normalizeLink(href) {
     // Si ya es un protocolo completo o mailto/tel, déjalo como está
@@ -23,9 +24,9 @@ function normalizeLink(href) {
 
     const basePath = getBasePath();
 
-    // Si comienza con ./, elimina el ./ y agrega basePath si es necesario
-    if (href.startsWith('./')) {
-        return basePath + href.substring(1);
+    // Caso especial: index.html está en la raíz
+    if (href === 'index.html') {
+        return basePath + '/index.html';
     }
 
     // Si comienza con src/, agrega basePath
