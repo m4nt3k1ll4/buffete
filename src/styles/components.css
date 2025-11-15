@@ -462,3 +462,42 @@ img.frame-it:not(:invalid) {
     border: none;
     box-shadow: none;
 }
+
+/* ============================= */
+/* FOOTER STYLING */
+/* ============================= */
+
+footer {
+    background-color: #2a2f36 !important;
+    color: #919faa !important;
+}
+
+footer h3 {
+    color: #ffffff !important;
+}
+
+footer .footer__link {
+    color: #919faa;
+    transition: color 0.2s ease;
+}
+
+footer .footer__link:hover {
+    color: #778cab;
+}
+
+footer a {
+    color: #919faa;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #778cab;
+}
+
+footer .border-border\/30 {
+    border-color: rgba(88, 89, 91, 0.3);
+}
+
+footer .text-secondary\/60 {
+    color: rgba(121, 126, 132, 0.6);
+}

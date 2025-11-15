@@ -1,11 +1,11 @@
-<footer class="bg-gray-900 text-gray-300 pt-16 pb-10">
+<footer class="bg-primary-dark text-secondary pt-16 pb-10">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
 
         <!-- LOGO + DESCRIPCIÓN -->
         <div>
             <img src="./src/assets/img/logo.svg" class="h-16 mb-4" alt="Quiroga Abogados">
             <p class="text-sm leading-relaxed">
-                (Breve descripción institucional proporcionada por el cliente).
+                Más de 17 años comprometidos con la excelencia jurídica y la defensa de los derechos de nuestros clientes.
             </p>
         </div>
 
@@ -15,8 +15,8 @@
             <ul class="flex flex-col gap-2 text-sm">
                 <li><a href="index.html" class="footer__link">Inicio</a></li>
                 <li><a href="src/pages/acerca-de.html" class="footer__link">Nosotros</a></li>
-                <li><a href="src/pages/consultores.html" class="footer__link">Red de consultores</a></li>
-                <li><a href="src/pages/tejido-social.html" class="footer__link">Tejido Social</a></li>
+                <li><a href="src/pages/consultores.html" class="footer__link">Red de Consultores</a></li>
+                <li><a href="src/pages/tejido-social.html" class="footer__link">Derecho y Tejido Social</a></li>
                 <li><a href="src/pages/contacto.html" class="footer__link">Contacto</a></li>
             </ul>
         </div>
@@ -26,23 +26,39 @@
             <h3 class="text-white font-semibold mb-4">Contacto</h3>
             <ul class="flex flex-col gap-3 text-sm">
                 <li class="flex items-center gap-3">
-                    <i data-lucide="phone"></i>
-                    <a href="tel:+573001234567" class="hover:underline">+57 300 1234567</a>
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    <a href="tel:+573001234567" class="hover:text-primary transition-colors">+57 300 1234567</a>
                 </li>
                 <li class="flex items-center gap-3">
-                    <i data-lucide="mail"></i>
-                    <a href="mailto:info@quirogaabogados.com" class="hover:underline">info@quirogaabogados.com</a>
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <a href="mailto:contacto@quirogaabogados.com" class="hover:text-primary transition-colors">contacto@quiroga.com</a>
                 </li>
                 <li class="flex items-center gap-3">
-                    <i data-lucide="map-pin"></i>
-                    <span>Dirección de la oficina (pendiente)</span>
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Contacta por WhatsApp</a>
                 </li>
             </ul>
         </div>
 
     </div>
 
-    <div class="mt-12 text-center text-xs text-gray-500">
+    <!-- Redes sociales (opcional) -->
+    <div class="mt-12 pt-8 border-t border-border/30 flex justify-center gap-6">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors">
+            <i class="fab fa-facebook-f w-5 h-5"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors">
+            <i class="fab fa-instagram w-5 h-5"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors">
+            <i class="fab fa-linkedin-in w-5 h-5"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary transition-colors">
+            <i class="fab fa-twitter w-5 h-5"></i>
+        </a>
+    </div>
+
+    <div class="mt-12 text-center text-xs text-secondary/60">
         © 2025 Quiroga Abogados — Todos los derechos reservados
     </div>
 </footer>
