@@ -30,10 +30,30 @@ async function loadComponent(id, file) {
         if (!res.ok) throw new Error(`Error 404: ${url} no encontrado.`);
 
         el.innerHTML = await res.text();
+        
+        // Corregir rutas de logos después de cargar el HTML
+        fixLogoRoutes(el, basePath);
     } catch (error) {
         console.error(`Error al cargar ${file}:`, error);
         el.innerHTML = `<p style="color:red; text-align:center;">Error al cargar ${id}.</p>`;
     }
+}
+
+/**
+ * Corrige las rutas de los logos para que funcionen desde cualquier ubicación
+ */
+function fixLogoRoutes(container, basePath) {
+    // Buscar todas las imágenes de logos
+    const logos = container.querySelectorAll('img[src*="logo"]');
+    logos.forEach(img => {
+        const src = img.getAttribute('src');
+        // Si la ruta es relativa, convertirla a absoluta
+        if (src && !src.startsWith('http') && !src.startsWith('/')) {
+            // Extraer el nombre del archivo (logo*.png o logo*.svg)
+            const filename = src.split('/').pop();
+            img.setAttribute('src', `${basePath}/src/assets/img/${filename}`);
+        }
+    });
 }
 
 
