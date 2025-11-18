@@ -67,115 +67,242 @@
                 </div>
             </div>
 
-            <!-- SECCIONES COLAPSABLES -->
+            <!-- SERVICIOS SEGÚN PERFIL -->
             <div data-aos="fade-up" class="mb-20">
                 <h3 class="text-2xl md:text-3xl font-bold text-primary-dark mb-10 text-center">
-                    Nuestros servicios
+                    Servicios según tu perfil
                 </h3>
-                <div class="space-y-4 max-w-4xl mx-auto">
-                    <!-- Derechos y Deberes Laborales -->
-                    <details class="border border-border rounded-lg overflow-hidden group" open>
+                <div class="max-w-4xl mx-auto">
+                    <!-- Para Trabajadores -->
+                    <details class="border border-primary rounded-lg overflow-hidden group mb-6" open>
                         <summary
-                            class="flex items-center justify-between px-6 py-4 bg-gray-50 cursor-pointer hover:bg-gray-100 transition-colors">
+                            class="flex items-center justify-between px-6 py-4 bg-white text-black cursor-pointer">
                             <div class="flex items-center gap-3">
-                                <i data-lucide="briefcase" class="w-6 h-6 text-primary"></i>
-                                <h3 class="text-lg font-semibold text-primary-dark">Derechos y deberes laborales</h3>
+                                <i data-lucide="user" class="w-6 h-6"></i>
+                                <h4 class="text-lg font-semibold text-black">Servicios para trabajadores</h4>
                             </div>
                             <i data-lucide="chevron-down"
-                                class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                                class="w-5 h-5 text-black transition-transform group-open:rotate-180"></i>
                         </summary>
-                        <ul class="px-6 py-4 bg-white space-y-3 border-t border-border">
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Asesoría en derechos fundamentales del trabajador</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Negociación y revisión de contratos laborales</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Asesoría en jornadas de trabajo y descansos reglamentarios</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Defensa contra despidos injustificados</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Reclamación de prestaciones sociales y liquidación</span>
-                            </li>
-                        </ul>
+                        <div class="px-6 py-6 bg-white border-t border-primary space-y-4">
+                            <!-- Aspectos Clave -->
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Salario justo:</strong> Asesoría en cálculo correcto de prestaciones y liquidaciones</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Protección ante despido:</strong> Defensa contra despidos injustificados y reclamación de indemnización</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Jornada y descanso:</strong> Garantía de cumplimiento de horarios, descansos y días de asueto</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Beneficios sociales:</strong> Asesoría en afiliación a seguridad social y reclamación de prestaciones</span>
+                                </li>
+                            </ul>
+
+                            <!-- Detalles de Servicios Anidados -->
+                            <div class="space-y-3 border-t pt-4">
+                                <!-- Derechos y Deberes -->
+                                <details class="border border-primary rounded-lg overflow-hidden group">
+                                    <summary class="flex items-center justify-between px-4 py-3 bg-white cursor-pointer hover:bg-gray-50 transition-colors border-b border-primary">
+                                        <div class="flex items-center gap-2">
+                                            <i data-lucide="briefcase" class="w-5 h-5 text-primary"></i>
+                                            <h5 class="text-base font-semibold text-gray-900">Derechos y deberes laborales</h5>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180"></i>
+                                    </summary>
+                                    <ul class="px-4 py-3 bg-white space-y-2 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Asesoría en derechos fundamentales del trabajador</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Negociación y revisión de contratos laborales</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Asesoría en jornadas de trabajo y descansos reglamentarios</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Defensa contra despidos injustificados</span>
+                                        </li>
+                                    </ul>
+                                </details>
+
+                                <!-- Conflictos -->
+                                <details class="border border-primary rounded-lg overflow-hidden group">
+                                    <summary class="flex items-center justify-between px-4 py-3 bg-white cursor-pointer hover:bg-gray-50 transition-colors border-b border-primary">
+                                        <div class="flex items-center gap-2">
+                                            <i data-lucide="gavel" class="w-5 h-5 text-primary"></i>
+                                            <h5 class="text-base font-semibold text-gray-900">Conflictos y litigios</h5>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180"></i>
+                                    </summary>
+                                    <ul class="px-4 py-3 bg-white space-y-2 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Representación en procesos laborales ante juzgados</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Mediación y conciliación en conflictos laborales</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Reclamación de salarios adeudados y prestaciones</span>
+                                        </li>
+                                    </ul>
+                                </details>
+
+                                <!-- Seguridad Social -->
+                                <details class="border border-primary rounded-lg overflow-hidden group">
+                                    <summary class="flex items-center justify-between px-4 py-3 bg-white cursor-pointer hover:bg-gray-50 transition-colors border-b border-primary">
+                                        <div class="flex items-center gap-2">
+                                            <i data-lucide="shield-check" class="w-5 h-5 text-primary"></i>
+                                            <h5 class="text-base font-semibold text-gray-900">Seguridad social y beneficios</h5>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 text-primary transition-transform group-open:rotate-180"></i>
+                                    </summary>
+                                    <ul class="px-4 py-3 bg-white space-y-2 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Asesoría en afiliación y contribuciones de seguridad social</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Reclamación de prestaciones de salud y pensión</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-primary font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Defensa ante negación de beneficios</span>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </div>
                     </details>
 
-                    <!-- Conflictos y Litigios Laborales -->
-                    <details class="border border-border rounded-lg overflow-hidden group">
+                    <!-- Para Empresas -->
+                    <details class="border border-accent rounded-lg overflow-hidden group">
                         <summary
-                            class="flex items-center justify-between px-6 py-4 bg-gray-50 cursor-pointer hover:bg-gray-100 transition-colors">
+                            class="flex items-center justify-between px-6 py-4 bg-white text-black cursor-pointer">
                             <div class="flex items-center gap-3">
-                                <i data-lucide="gavel" class="w-6 h-6 text-primary"></i>
-                                <h3 class="text-lg font-semibold text-primary-dark">Conflictos y litigios laborales</h3>
+                                <i data-lucide="building-2" class="w-6 h-6"></i>
+                                <h4 class="text-lg font-semibold text-black">Servicios para empresas</h4>
                             </div>
                             <i data-lucide="chevron-down"
-                                class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                                class="w-5 h-5 text-black transition-transform group-open:rotate-180"></i>
                         </summary>
-                        <ul class="px-6 py-4 bg-white space-y-3 border-t border-border">
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Representación en procesos laborales ante juzgados</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Mediación y conciliación en conflictos laborales</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Reclamación de salarios adeudados y prestaciones</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Defensa en acciones de reintegro y restitución</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Asesoría a empresas en defensa laboral</span>
-                            </li>
-                        </ul>
-                    </details>
+                        <div class="px-6 py-6 bg-white border-t border-accent space-y-4">
+                            <!-- Aspectos Clave -->
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Cumplimiento normativo:</strong> Asesoría en legislación laboral y regulaciones de empleo</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Contratación segura:</strong> Redacción y revisión de contratos laborales conformes a ley</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Defensa ante demandas:</strong> Representación en litigios laborales y negociación de acuerdos</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-accent font-bold text-lg mt-0.5">✓</span>
+                                    <span class="text-gray-900"><strong>Aportes sociales:</strong> Asesoría en cálculo correcto de seguridad social y prestaciones</span>
+                                </li>
+                            </ul>
 
-                    <!-- Seguridad Social y Beneficios -->
-                    <details class="border border-border rounded-lg overflow-hidden group">
-                        <summary
-                            class="flex items-center justify-between px-6 py-4 bg-gray-50 cursor-pointer hover:bg-gray-100 transition-colors">
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="shield-check" class="w-6 h-6 text-primary"></i>
-                                <h3 class="text-lg font-semibold text-primary-dark">Seguridad social y beneficios</h3>
+                            <!-- Detalles de Servicios Anidados -->
+                            <div class="space-y-3 border-t pt-4">
+                                <!-- Derechos y Deberes -->
+                                <details class="border border-accent rounded-lg overflow-hidden group">
+                                    <summary class="flex items-center justify-between px-4 py-3 bg-white cursor-pointer hover:bg-gray-50 transition-colors border-b border-accent">
+                                        <div class="flex items-center gap-2">
+                                            <i data-lucide="briefcase" class="w-5 h-5 text-accent"></i>
+                                            <h5 class="text-base font-semibold text-gray-900">Derechos y deberes laborales</h5>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 text-accent transition-transform group-open:rotate-180"></i>
+                                    </summary>
+                                    <ul class="px-4 py-3 bg-white space-y-2 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Asesoría en obligaciones legales del empleador</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Redacción de contratos laborales seguros</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Asesoría en normativa de seguridad y salud ocupacional</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Procedimientos de terminación de contrato conforme a ley</span>
+                                        </li>
+                                    </ul>
+                                </details>
+
+                                <!-- Conflictos -->
+                                <details class="border border-accent rounded-lg overflow-hidden group">
+                                    <summary class="flex items-center justify-between px-4 py-3 bg-white cursor-pointer hover:bg-gray-50 transition-colors border-b border-accent">
+                                        <div class="flex items-center gap-2">
+                                            <i data-lucide="gavel" class="w-5 h-5 text-accent"></i>
+                                            <h5 class="text-base font-semibold text-gray-900">Defensa y litigios</h5>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 text-accent transition-transform group-open:rotate-180"></i>
+                                    </summary>
+                                    <ul class="px-4 py-3 bg-white space-y-2 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Defensa en demandas laborales ante juzgados</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Negociación de acuerdos y transacciones laborales</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Defensa ante reclamos de salarios adeudados</span>
+                                        </li>
+                                    </ul>
+                                </details>
+
+                                <!-- Cumplimiento -->
+                                <details class="border border-accent rounded-lg overflow-hidden group">
+                                    <summary class="flex items-center justify-between px-4 py-3 bg-white cursor-pointer hover:bg-gray-50 transition-colors border-b border-accent">
+                                        <div class="flex items-center gap-2">
+                                            <i data-lucide="shield-check" class="w-5 h-5 text-accent"></i>
+                                            <h5 class="text-base font-semibold text-gray-900">Cumplimiento y afiliación</h5>
+                                        </div>
+                                        <i data-lucide="chevron-down" class="w-4 h-4 text-accent transition-transform group-open:rotate-180"></i>
+                                    </summary>
+                                    <ul class="px-4 py-3 bg-white space-y-2 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Asesoría en afiliación de trabajadores a seguridad social</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Auditoría de cumplimiento en obligaciones laborales</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-accent font-bold mt-0.5">•</span>
+                                            <span class="text-gray-900">Defensa ante inspecciones de ministerios de trabajo</span>
+                                        </li>
+                                    </ul>
+                                </details>
                             </div>
-                            <i data-lucide="chevron-down"
-                                class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <ul class="px-6 py-4 bg-white space-y-3 border-t border-border">
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Asesoría en afiliación y contribuciones de seguridad social</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Reclamación de prestaciones de salud y pensión</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Defensa ante negación de beneficios</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Asesoría en pensión por vejez e invalidez</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary font-bold mt-1">•</span>
-                                <span class="text-gray-700">Trámites ante organismos de seguridad social</span>
-                            </li>
-                        </ul>
+                        </div>
                     </details>
                 </div>
             </div>
