@@ -516,56 +516,6 @@
     <div id="whatsappBubble"></div>
 
     <script src="../scripts/loader.js"></script>
-    <script>
-        // Personalizar carga de componentes para esta ubicación
-        async function loadLocalComponents() {
-            const header = document.getElementById('header');
-            const footer = document.getElementById('footer');
-            const whatsappBubble = document.getElementById('whatsappBubble');
-            
-            try {
-                const headerRes = await fetch('../components/header.html');
-                if (headerRes.ok) {
-                    header.innerHTML = await headerRes.text();
-                    // Corregir rutas después de cargar
-                    fixRoutesInHeader(header);
-                }
-                
-                const footerRes = await fetch('../components/footer.html');
-                if (footerRes.ok) footer.innerHTML = await footerRes.text();
-                
-                const whatsappRes = await fetch('../components/whatsapp-bubble.html');
-                if (whatsappRes.ok) whatsappBubble.innerHTML = await whatsappRes.text();
-            } catch (e) {
-                console.warn('Usando loader.js alternativo');
-            }
-        }
-        
-        // Corregir rutas en el header cuando se carga desde una página anidada
-        function fixRoutesInHeader(headerElement) {
-            // Corregir logo
-            const logo = headerElement.querySelector('img[src*="logo"]');
-            if (logo && logo.src.includes('assets/')) {
-                logo.src = '/assets/img/logoHeader.png';
-            }
-            
-            // Corregir links de navegación
-            const links = headerElement.querySelectorAll('a');
-            links.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href && href.startsWith('src/')) {
-                    // Es una ruta relativa que necesita corrección
-                    link.href = '/' + href;
-                } else if (href === 'index.html') {
-                    link.href = '/';
-                }
-            });
-        }
-        
-        loadLocalComponents().then(() => {
-            if (window.lucide) lucide.createIcons();
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
