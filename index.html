@@ -9,12 +9,14 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <!-- FONT AWESOME (sin integrity) -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- FRAMEIT -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frameitcss/dist/frameit.min.css"> -->
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
     <!-- TAILWIND -->
     <link href="./src/output.css" rel="stylesheet">
@@ -39,9 +41,11 @@
     <!-- ========================= -->
     <!-- HERO SECTION -->
     <!-- ========================= -->
-    <section class="relative w-full overflow-hidden" style="margin-top: 80px; height: 100vh; background: linear-gradient(135deg, #2a2f36 0%, #58595b 50%, #778cab 100%); background-size: cover; background-position: center;">
+    <section class="relative w-full overflow-hidden"
+        style="margin-top: 80px; height: 100vh; background: linear-gradient(135deg, #2a2f36 0%, #58595b 50%, #778cab 100%); background-size: cover; background-position: center;">
         <img src="./assets/images/mainBkgnd.jpg" alt="Firma de abogados"
-            class="absolute inset-0 w-full h-full object-cover object-center" style="object-fit: cover; object-position: center;">
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            style="object-fit: cover; object-position: center;">
 
         <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center px-6 text-center">
             <h1 data-aos="fade-up" class="text-white text-4xl md:text-6xl font-bold tracking-tight">
@@ -54,9 +58,9 @@
 
             <a href="./src/pages/contacto.html" data-aos="fade-up" data-aos-delay="400"
                 class="mt-8 px-8 py-3 bg-primary text-white font-medium rounded-lg shadow hover:bg-accent transition">
-                Solicitar asesoría 
+                Solicitar asesoría
             </a>
-            
+
         </div>
     </section>
 
@@ -102,180 +106,228 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Tarjeta: Derecho Administrativo -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-8">
                         <div class="flex items-center gap-4 mb-5">
                             <i data-lucide="scale" class="w-10 h-10 text-primary shrink-0"></i>
                             <h3 class="text-xl md:text-2xl font-bold text-primary-dark">Derecho Administrativo</h3>
                         </div>
-                        <p class="text-gray-600 text-base mb-6 line-clamp-2">Soluciones en derecho administrativo y procedimientos ante entidades públicas.</p>
-                        <a href="./src/pages/servicios/administrativo.html" class="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition text-base">
+                        <p class="text-gray-600 text-base mb-6 line-clamp-2">Soluciones en derecho administrativo y
+                            procedimientos ante entidades públicas.</p>
+                        <a href="./src/pages/servicios/administrativo.html"
+                            class="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition text-base">
                             Más información <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Contratación Estatal -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="50">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="50">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="file-text" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Contratación Estatal</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en procesos de licitación y contratación con entidades públicas.</p>
-                        <a href="./src/pages/servicios/contratacion-estatal.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en procesos de licitación y
+                            contratación con entidades públicas.</p>
+                        <a href="./src/pages/servicios/contratacion-estatal.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Derecho Policivo y Urbanístico -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="building-2" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Policivo & Urbanístico</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en materia de policía administrativa y derecho urbanístico.</p>
-                        <a href="./src/pages/servicios/policivo-urbanistico.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en materia de policía administrativa
+                            y derecho urbanístico.</p>
+                        <a href="./src/pages/servicios/policivo-urbanistico.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Derecho Laboral -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="150">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="users" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Derecho Laboral</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Protección de derechos laborales y asesoría en conflictos laborales.</p>
-                        <a href="./src/pages/servicios/laboral.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Protección de derechos laborales y asesoría
+                            en conflictos laborales.</p>
+                        <a href="./src/pages/servicios/laboral.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Derecho Comercial -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="briefcase" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Derecho Comercial</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría comercial y contractual para empresas y negocios.</p>
-                        <a href="./src/pages/servicios/comercial.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría comercial y contractual para
+                            empresas y negocios.</p>
+                        <a href="./src/pages/servicios/comercial.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Derecho Societario -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="250">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="250">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="building" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Derecho Societario</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Constitución, fusiones, escisiones y gobernanza corporativa.</p>
-                        <a href="./src/pages/servicios/societario.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Constitución, fusiones, escisiones y
+                            gobernanza corporativa.</p>
+                        <a href="./src/pages/servicios/societario.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Derecho Ambiental -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="leaf" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Derecho Ambiental</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Cumplimiento normativo ambiental y defensa de derechos ambientales.</p>
-                        <a href="./src/pages/servicios/ambiental.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Cumplimiento normativo ambiental y defensa de
+                            derechos ambientales.</p>
+                        <a href="./src/pages/servicios/ambiental.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Derecho Familiar -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="350">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="350">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="heart" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Derecho Familiar</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en divorcios, custodia, alimentos y otros asuntos familiares.</p>
-                        <a href="./src/pages/servicios/familiar.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en divorcios, custodia, alimentos y
+                            otros asuntos familiares.</p>
+                        <a href="./src/pages/servicios/familiar.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Derecho Tributario -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="calculator" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Derecho Tributario</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría fiscal y tributaria para personas naturales y empresas.</p>
-                        <a href="./src/pages/servicios/tributario.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría fiscal y tributaria para personas
+                            naturales y empresas.</p>
+                        <a href="./src/pages/servicios/tributario.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Responsabilidad Civil -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="450">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="450">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="shield-alert" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Responsabilidad Civil</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Defensa en casos de responsabilidad civil y daño antijurídico.</p>
-                        <a href="./src/pages/servicios/responsabilidad-civil.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Defensa en casos de responsabilidad civil y
+                            daño antijurídico.</p>
+                        <a href="./src/pages/servicios/responsabilidad-civil.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Propiedad Intelectual -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="copyright" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Propiedad Intelectual</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Protección de marcas, patentes, derechos de autor y know-how.</p>
-                        <a href="./src/pages/servicios/propiedad-intelectual.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Protección de marcas, patentes, derechos de
+                            autor y know-how.</p>
+                        <a href="./src/pages/servicios/propiedad-intelectual.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Tarjeta: Sucesiones -->
-                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40" data-aos="fade-up" data-aos-delay="550">
-                    <div class="service-card__bg" style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
+                <div class="service-card group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary/20 hover:border-primary/40"
+                    data-aos="fade-up" data-aos-delay="550">
+                    <div class="service-card__bg"
+                        style="background-image: url('./src/assets/services/administrativo/img-1.jpg')"></div>
                     <div class="service-card__content relative z-10 p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="scroll" class="w-8 h-8 text-primary shrink-0"></i>
                             <h3 class="text-xl font-semibold text-primary-dark">Sucesiones</h3>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en procesos hereditarios, testamentarías y particiones.</p>
-                        <a href="./src/pages/servicios/sucesiones.html" class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Asesoría en procesos hereditarios,
+                            testamentarías y particiones.</p>
+                        <a href="./src/pages/servicios/sucesiones.html"
+                            class="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition">
                             Más información <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -307,7 +359,10 @@
                         Tu aliado jurídico de confianza
                     </h2>
                     <p class="text-gray-600 text-lg leading-relaxed">
-                        En Quiroga Abogados contamos con más de 17 años de experiencia defendiendo los derechos de personas y empresas. Nuestro equipo de profesionales especializados ha resuelto cientos de casos complejos, ganando la confianza de clientes que buscan soluciones jurídicas efectivas y oportunas. Nos comprometemos con tu éxito legal.
+                        En Quiroga Abogados contamos con más de 17 años de experiencia defendiendo los derechos de
+                        personas y empresas. Nuestro equipo de profesionales especializados ha resuelto cientos de casos
+                        complejos, ganando la confianza de clientes que buscan soluciones jurídicas efectivas y
+                        oportunas. Nos comprometemos con tu éxito legal.
                     </p>
                 </div>
 
@@ -357,11 +412,13 @@
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
                 <!-- Paso 1: Consulta Inicial -->
                 <div class="text-center" data-aos="fade-up">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
                         1
                     </div>
                     <h3 class="text-base lg:text-lg font-semibold text-primary-dark mb-2">Consulta Inicial</h3>
-                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Escuchamos tu caso y evaluamos tus necesidades jurídicas</p>
+                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Escuchamos tu caso y evaluamos tus
+                        necesidades jurídicas</p>
                 </div>
 
                 <!-- Flecha (solo visible en lg) -->
@@ -371,11 +428,13 @@
 
                 <!-- Paso 2: Análisis del Caso -->
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
                         2
                     </div>
                     <h3 class="text-base lg:text-lg font-semibold text-primary-dark mb-2">Análisis del Caso</h3>
-                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Realizamos un estudio profundo de tu situación jurídica</p>
+                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Realizamos un estudio profundo de tu
+                        situación jurídica</p>
                 </div>
 
                 <!-- Flecha (solo visible en lg) -->
@@ -385,11 +444,13 @@
 
                 <!-- Paso 3: Ejecución Jurídica -->
                 <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
                         3
                     </div>
                     <h3 class="text-base lg:text-lg font-semibold text-primary-dark mb-2">Ejecución Jurídica</h3>
-                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Implementamos la estrategia legal más efectiva</p>
+                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Implementamos la estrategia legal más
+                        efectiva</p>
                 </div>
 
                 <!-- Flecha (solo visible en lg) -->
@@ -399,11 +460,13 @@
 
                 <!-- Paso 4: Resultados -->
                 <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full text-white font-bold text-xl mx-auto mb-4" style="background-color: #919faa;">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full text-white font-bold text-xl mx-auto mb-4"
+                        style="background-color: #919faa;">
                         4
                     </div>
                     <h3 class="text-base lg:text-lg font-semibold text-primary-dark mb-2">Resultados</h3>
-                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Obtenemos los mejores resultados para tu caso</p>
+                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Obtenemos los mejores resultados para tu
+                        caso</p>
                 </div>
 
                 <!-- Flecha (solo visible en lg) -->
@@ -413,11 +476,13 @@
 
                 <!-- Paso 5: Acompañamiento -->
                 <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
+                    <div
+                        class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white font-bold text-xl mx-auto mb-4">
                         5
                     </div>
                     <h3 class="text-base lg:text-lg font-semibold text-primary-dark mb-2">Acompañamiento</h3>
-                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Te apoyamos en la ejecución y seguimiento</p>
+                    <p class="text-gray-600 text-xs lg:text-sm leading-tight">Te apoyamos en la ejecución y seguimiento
+                    </p>
                 </div>
             </div>
         </div>
@@ -428,15 +493,16 @@
     <!-- ========================= -->
     <section class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="mt-16 text-center shadow-2xl rounded-lg px-6 py-12 md:p-12" style="background-color: #2a2f36;" data-aos="fade-up">
+            <div class="mt-16 text-center shadow-2xl rounded-lg px-6 py-12 md:p-12" style="background-color: #2a2f36;"
+                data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-black text-white mb-4">
                     ¿Quieres prevenir problemas legales?
                 </h2>
                 <p class="text-white text-lg md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto font-medium">
                     Nuestras asesorías preventivas te ayudan a identificar riesgos legales y evitar conflictos costosos.
                 </p>
-                <a href="https://wa.me/573001234567?text=Hola,%20me%20gustaría%20asesoría%20preventiva"
-                    target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/573001234567?text=Hola,%20me%20gustaría%20asesoría%20preventiva" target="_blank"
+                    rel="noopener noreferrer"
                     style="background-color: #778cab; color: white; padding: 0.75rem 1.25rem; border-radius: 9999px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-weight: 900; font-size: 0.85rem; transition: all 0.3s ease; text-decoration: none; white-space: nowrap; flex-direction: row; margin: 0 auto;"
                     onmouseover="this.style.backgroundColor='#919faa'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 35px 60px -15px rgba(0, 0, 0, 0.3)';"
                     onmouseout="this.style.backgroundColor='#778cab'; this.style.transform='scale(1)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.25)';">
@@ -464,18 +530,18 @@
         if (window.lucide) {
             lucide.createIcons();
         }
-        
+
         // Ajustar margin-top del hero según el navbar en móviles pequeños
         function adjustHeroMargin() {
             const navbar = document.querySelector('.navbar');
             const hero = document.querySelector('section.relative[style*="margin-top"]');
-            
+
             if (navbar && hero && window.innerWidth <= 480) {
                 const navbarHeight = navbar.offsetHeight || 70;
                 hero.style.marginTop = navbarHeight + 'px';
             }
         }
-        
+
         // Ejecutar al cargar y redimensionar
         setTimeout(adjustHeroMargin, 300);
         window.addEventListener('resize', adjustHeroMargin);
