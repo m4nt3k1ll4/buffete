@@ -18,92 +18,8 @@
 
 <body class="font-sans bg-background text-primary-dark">
     <div id="header"></div>
-
-    <!-- ========================= -->
-    <!-- HERO SECTION -->
-    <!-- ========================= -->
-    <section class="relative w-full overflow-hidden"
-        style="height: 100vh; background: linear-gradient(135deg, #2a2f36 0%, #58595b 50%, #778cab 100%);">
-        <img src="../assets/img/hero.jpg" alt="Contacto" class="frame-it absolute inset-0 w-full h-full object-cover">
-
-        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center px-6 text-center">
-            <h1 data-aos="fade-up" class="text-white text-4xl md:text-6xl font-bold tracking-tight">
-                Contáctanos
-            </h1>
-
-            <p data-aos="fade-up" data-aos-delay="200" class="mt-4 text-white text-lg max-w-3xl leading-relaxed">
-                Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo y cuéntanos sobre tu caso.
-                Responderemos a tu consulta de forma rápida y profesional.
-            </p>
-        </div>
-    </section>
-
-    <!-- ========================= -->
-    <!-- SECCIÓN: FORMAS DE CONTACTO -->
-    <!-- ========================= -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">
-                Formas de contacto
-            </h2>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- WhatsApp -->
-                <div data-aos="fade-up" class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
-                        <i class="fab fa-whatsapp text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary-dark mb-2">WhatsApp</h3>
-                    <p class="text-gray-600 text-sm mb-4">Comunicación rápida y directa</p>
-                    <a href="https://wa.me/573001234567?text=Hola,%20me%20gustaría%20consultar%20sobre%20un%20asunto%20legal"
-                        target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-accent transition-all duration-300">
-                        +57 300 1234567
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Correo Electrónico -->
-                <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="mail" class="text-white w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary-dark mb-2">Correo electrónico</h3>
-                    <p class="text-gray-600 text-sm mb-4">Para consultas detalladas</p>
-                    <a href="mailto:contacto@quirogaabogados.com"
-                        class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-accent transition-all duration-300">
-                        contacto@quiroga.com
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Ubicación -->
-                <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="map-pin" class="text-white w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary-dark mb-2">Ubicación</h3>
-                    <p class="text-gray-600 text-sm mb-4">Asesoría Jurídica a Nivel Nacional</p>
-                    <p class="text-primary font-semibold">Disponible en todo el país</p>
-                </div>
-
-                <!-- Agenda tu Cita -->
-                <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
-                        <i data-lucide="calendar" class="text-white w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary-dark mb-2">Agenda tu cita</h3>
-                    <p class="text-gray-600 text-sm mb-4">Cita Virtual o Presencial</p>
-                    <a href="#formulario"
-                        class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-accent transition-all duration-300">
-                        Agendar
-                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+<br>
+<br>
     <!-- ========================= -->
     <!-- SECCIÓN: ESCRIBENOS AHORA -->
     <!-- ========================= -->
@@ -117,11 +33,38 @@
                 para nosotros.
             </p>
 
+            <!-- Selector de Tipo de Cliente -->
+            <div class="mb-12 flex justify-center gap-8" data-aos="fade-up" data-aos-delay="150">
+                <button type="button" class="cliente-selector flex flex-col items-center gap-3 p-6 rounded-lg border-2 border-gray-200 cursor-pointer transition-all hover:border-primary hover:bg-gray-50" data-tipo="Persona Natural">
+                    <i data-lucide="user" class="w-12 h-12 text-gray-600"></i>
+                    <span class="font-semibold text-gray-700">Persona Natural</span>
+                </button>
+                <button type="button" class="cliente-selector flex flex-col items-center gap-3 p-6 rounded-lg border-2 border-gray-200 cursor-pointer transition-all hover:border-primary hover:bg-gray-50" data-tipo="Persona Jurídica">
+                    <i data-lucide="building" class="w-12 h-12 text-gray-600"></i>
+                    <span class="font-semibold text-gray-700">Persona Jurídica</span>
+                </button>
+            </div>
+
             <form id="contactForm" class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                <!-- Nombre -->
-                <div class="mb-6">
+                <input type="hidden" id="tipoCliente" name="tipoCliente" value="">
+                <!-- Nombre (Persona Natural) -->
+                <div id="nombreDiv" class="mb-6">
                     <label for="nombre" class="block text-primary-dark font-semibold mb-2">Nombre Completo *</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre"
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"
+                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                </div>
+
+                <!-- Razón Social (Persona Jurídica) -->
+                <div id="razonSocialDiv" class="mb-6 hidden">
+                    <label for="razonSocial" class="block text-primary-dark font-semibold mb-2">Razón Social *</label>
+                    <input type="text" id="razonSocial" name="razonSocial" placeholder="Nombre de la empresa"
+                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                </div>
+
+                <!-- NIT (Persona Jurídica) -->
+                <div id="nitDiv" class="mb-6 hidden">
+                    <label for="nit" class="block text-primary-dark font-semibold mb-2">NIT *</label>
+                    <input type="text" id="nit" name="nit" placeholder="Número de identificación tributaria"
                         class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors">
                 </div>
 
@@ -202,6 +145,72 @@
         </div>
     </section>
 
+    <!-- ========================= -->
+    <!-- SECCIÓN: FORMAS DE CONTACTO -->
+    <!-- ========================= -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                Formas de contacto
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- WhatsApp -->
+                <div data-aos="fade-up" class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-whatsapp text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">WhatsApp</h3>
+                    <p class="text-gray-600 text-sm mb-4">Comunicación rápida y directa</p>
+                    <a href="https://wa.me/573001234567?text=Hola,%20me%20gustaría%20consultar%20sobre%20un%20asunto%20legal"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-accent transition-all duration-300">
+                        +57 300 1234567
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="mail" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Correo electrónico</h3>
+                    <p class="text-gray-600 text-sm mb-4">Para consultas detalladas</p>
+                    <a href="mailto:contacto@quirogaabogados.com"
+                        class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-accent transition-all duration-300">
+                        contacto@quiroga.com
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Ubicación -->
+                <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="map-pin" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Ubicación</h3>
+                    <p class="text-gray-600 text-sm mb-4">Asesoría Jurídica a Nivel Nacional</p>
+                    <p class="text-primary font-semibold">Disponible en todo el país</p>
+                </div>
+
+                <!-- Agenda tu Cita -->
+                <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="calendar" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-dark mb-2">Agenda tu cita</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cita Virtual o Presencial</p>
+                    <a href="#formulario"
+                        class="inline-flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-accent transition-all duration-300">
+                        Agendar
+                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div id="footer"></div>
     <div id="whatsappBubble"></div>
 
@@ -210,6 +219,51 @@
     <script>
         AOS.init();
         if (window.lucide) lucide.createIcons();
+
+        // Manejo del selector de tipo de cliente
+        const clienteSelectors = document.querySelectorAll('.cliente-selector');
+        const tipoClienteInput = document.getElementById('tipoCliente');
+        const nombreDiv = document.getElementById('nombreDiv');
+        const razonSocialDiv = document.getElementById('razonSocialDiv');
+        const nitDiv = document.getElementById('nitDiv');
+        const nombreInput = document.getElementById('nombre');
+        const razonSocialInput = document.getElementById('razonSocial');
+        const nitInput = document.getElementById('nit');
+
+        clienteSelectors.forEach(selector => {
+            selector.addEventListener('click', function() {
+                // Remover clase activa de todos los botones
+                clienteSelectors.forEach(btn => {
+                    btn.classList.remove('border-primary', 'bg-blue-50');
+                    btn.classList.add('border-gray-200');
+                });
+                
+                // Agregar clase activa al botón clickeado
+                this.classList.remove('border-gray-200');
+                this.classList.add('border-primary', 'bg-blue-50');
+                
+                // Actualizar el valor del input oculto
+                const tipoSeleccionado = this.getAttribute('data-tipo');
+                tipoClienteInput.value = tipoSeleccionado;
+                
+                // Toggle de campos según el tipo de cliente
+                if (tipoSeleccionado === 'Persona Natural') {
+                    nombreDiv.classList.remove('hidden');
+                    razonSocialDiv.classList.add('hidden');
+                    nitDiv.classList.add('hidden');
+                    nombreInput.removeAttribute('disabled');
+                    razonSocialInput.setAttribute('disabled', 'disabled');
+                    nitInput.setAttribute('disabled', 'disabled');
+                } else if (tipoSeleccionado === 'Persona Jurídica') {
+                    nombreDiv.classList.add('hidden');
+                    razonSocialDiv.classList.remove('hidden');
+                    nitDiv.classList.remove('hidden');
+                    nombreInput.setAttribute('disabled', 'disabled');
+                    razonSocialInput.removeAttribute('disabled');
+                    nitInput.removeAttribute('disabled');
+                }
+            });
+        });
 
         // Manejo del formulario de contacto
         const contactForm = document.getElementById('contactForm');
@@ -220,14 +274,40 @@
                 e.preventDefault();
 
                 // Obtener datos del formulario
-                const nombre = document.getElementById('nombre').value;
+                const tipoCliente = document.getElementById('tipoCliente').value;
                 const correo = document.getElementById('correo').value;
                 const telefono = document.getElementById('telefono').value;
                 const asunto = document.getElementById('asunto').value || 'Consulta Legal';
                 const mensaje = document.getElementById('mensaje').value;
 
-                // Validar que los campos requeridos estén completo
-                if (!nombre || !correo || !telefono || !mensaje) {
+                let nombre = '';
+                let razonSocial = '';
+                let nit = '';
+                let datosClienteValidos = false;
+
+                // Validar datos según tipo de cliente
+                if (tipoCliente === 'Persona Natural') {
+                    nombre = document.getElementById('nombre').value;
+                    if (!nombre) {
+                        mostrarMensaje('Por favor completa tu nombre.', 'error');
+                        return;
+                    }
+                    datosClienteValidos = true;
+                } else if (tipoCliente === 'Persona Jurídica') {
+                    razonSocial = document.getElementById('razonSocial').value;
+                    nit = document.getElementById('nit').value;
+                    if (!razonSocial || !nit) {
+                        mostrarMensaje('Por favor completa la razón social y NIT.', 'error');
+                        return;
+                    }
+                    datosClienteValidos = true;
+                } else {
+                    mostrarMensaje('Por favor selecciona un tipo de cliente.', 'error');
+                    return;
+                }
+
+                // Validar que los campos requeridos estén completos
+                if (!correo || !telefono || !mensaje) {
                     mostrarMensaje('Por favor completa todos los campos requeridos.', 'error');
                     return;
                 }
@@ -240,8 +320,15 @@
                 }
 
                 // Construir el mensaje para WhatsApp
-                // Formato: *ASUNTO* (en negrilla) seguido del mensaje
-                const textoWhatsApp = `*${asunto}*%0A%0ANombre: ${nombre}%0ACorreo: ${correo}%0ATeléfono: ${telefono}%0A%0AMensaje:%0A${mensaje}`;
+                let textoWhatsApp = `*${asunto}*%0A%0ATipo de Cliente: ${tipoCliente}%0A`;
+                
+                if (tipoCliente === 'Persona Natural') {
+                    textoWhatsApp += `Nombre: ${nombre}%0A`;
+                } else {
+                    textoWhatsApp += `Razón Social: ${razonSocial}%0ANIT: ${nit}%0A`;
+                }
+                
+                textoWhatsApp += `Correo: ${correo}%0ATeléfono: ${telefono}%0A%0AMensaje:%0A${mensaje}`;
 
                 // Número de WhatsApp (sin +)
                 const numeroWhatsApp = '573001234567';
@@ -256,6 +343,14 @@
                 setTimeout(() => {
                     window.open(urlWhatsApp, '_blank');
                     contactForm.reset();
+                    // Resetear campos visuales
+                    clienteSelectors.forEach(btn => {
+                        btn.classList.remove('border-primary', 'bg-blue-50');
+                        btn.classList.add('border-gray-200');
+                    });
+                    nombreDiv.classList.remove('hidden');
+                    razonSocialDiv.classList.add('hidden');
+                    nitDiv.classList.add('hidden');
                 }, 1000);
 
                 // Ocultar mensaje después de 5 segundos
