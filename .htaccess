@@ -5,7 +5,7 @@
     
     # Redirigir www a no-www
     RewriteCond %{HTTP_HOST} ^www\.quirogaabogados\.com$ [NC]
-    RewriteRule ^(.*)$ https://quirogabogados.com/$1 [R=301,L]
+    RewriteRule ^(.*)$ https://quirogaabogadosasociados.com/$1 [R=301,L]
     
     # Forzar HTTPS
     RewriteCond %{HTTPS} off
@@ -47,4 +47,5 @@
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
 
