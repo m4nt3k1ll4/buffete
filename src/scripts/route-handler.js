@@ -3,6 +3,9 @@
  * Detecta si estamos en GitHub Pages (/bufete/) o en local
  */
 
+// Marcar que este script está cargado
+window.routeHandlerLoaded = true;
+
 function getBasePath() {
     const path = window.location.pathname;
     // Si la URL contiene /bufete/, es GitHub Pages

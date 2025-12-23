@@ -13,6 +13,22 @@ function getBasePath() {
 }
 
 /**
+ * Detecta el nivel de profundidad de la página actual
+ */
+function getDepthLevel() {
+    const path = window.location.pathname;
+    const basePath = getBasePath();
+    
+    // Remover el basePath del path
+    let relativePath = path.replace(basePath, '');
+    
+    // Contar cuántas carpetas hay después de la raíz
+    const depth = relativePath.split('/').filter(p => p && p !== 'index.html').length;
+    
+    return depth;
+}
+
+/**
  * Carga un componente HTML (header/footer) en un elemento del DOM.
  * Funciona tanto en local como en GitHub Pages.
  */
@@ -22,12 +38,24 @@ async function loadComponent(id, file) {
 
     try {
         const basePath = getBasePath();
-        const url = file.startsWith("/") 
-            ? file 
-            : `${basePath}/src/components/${file}`;
+        const depth = getDepthLevel();
+        
+        // Construir la ruta correcta según el nivel de profundidad
+        let componentPath;
+        if (depth === 0) {
+            // En la raíz (index.html)
+            componentPath = `${basePath}/src/components/${file}`;
+        } else if (depth === 1) {
+            // En una subcarpeta (pages/contacto.html)
+            componentPath = `${basePath ? basePath : '..'}/src/components/${file}`;
+        } else {
+            // En subcarpetas anidadas (pages/servicios/administrativo.html)
+            const prefix = '../'.repeat(depth);
+            componentPath = `${prefix}src/components/${file}`;
+        }
 
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Error 404: ${url} no encontrado.`);
+        const res = await fetch(componentPath);
+        if (!res.ok) throw new Error(`Error 404: ${componentPath} no encontrado.`);
 
         el.innerHTML = await res.text();
         
@@ -92,22 +120,36 @@ async function main() {
         console.error("Error al cargar componentes HTML:", error);
     }
 
-    // 2. SOLO CUANDO el HTML ya está en la página, carga los scripts
-    //    que dependen de ese HTML (en orden).
+    // 2. Cargar scripts solo si no están ya cargados
     try {
-        await loadScript("src/scripts/route-handler.js");
-        await loadScript("src/scripts/navbar.js");
-        await loadScript("src/scripts/sidebar.js");
-        await loadScript("src/scripts/counters.js");
-        await loadScript("src/scripts/whatsapp-bubble.js");
+        const depth = getDepthLevel();
+        const scriptsToLoad = [];
         
-        // 3. Carga y activa AOS (animaciones)
-        await loadScript("https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js");
-        if (window.AOS) {
-            AOS.init();
+        // Solo cargar route-handler si no está ya cargado
+        if (!window.routeHandlerLoaded) {
+            const prefix = depth > 0 ? '../'.repeat(depth) : '';
+            scriptsToLoad.push(loadScript(`${prefix}src/scripts/route-handler.js`));
         }
         
-        // 4. Renderiza los iconos de Lucide después de que todo esté en el DOM
+        // Cargar otros scripts necesarios
+        if (depth > 0) {
+            const prefix = '../'.repeat(depth);
+            scriptsToLoad.push(
+                loadScript(`${prefix}src/scripts/navbar.js`),
+                loadScript(`${prefix}src/scripts/sidebar.js`),
+                loadScript(`${prefix}src/scripts/counters.js`)
+            );
+        } else {
+            scriptsToLoad.push(
+                loadScript("src/scripts/navbar.js"),
+                loadScript("src/scripts/sidebar.js"),
+                loadScript("src/scripts/counters.js")
+            );
+        }
+        
+        await Promise.all(scriptsToLoad);
+        
+        // 3. Renderiza los iconos de Lucide después de que todo esté en el DOM
         if (window.lucide) {
             lucide.createIcons();
         }
