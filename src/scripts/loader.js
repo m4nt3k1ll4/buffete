@@ -13,22 +13,6 @@ function getBasePath() {
 }
 
 /**
- * Detecta el nivel de profundidad de la página actual
- */
-function getDepthLevel() {
-    const path = window.location.pathname;
-    const basePath = getBasePath();
-    
-    // Remover el basePath del path
-    let relativePath = path.replace(basePath, '');
-    
-    // Contar cuántas carpetas hay después de la raíz
-    const depth = relativePath.split('/').filter(p => p && p !== 'index.html').length;
-    
-    return depth;
-}
-
-/**
  * Carga un componente HTML (header/footer) en un elemento del DOM.
  * Funciona tanto en local como en GitHub Pages.
  */
@@ -38,21 +22,10 @@ async function loadComponent(id, file) {
 
     try {
         const basePath = getBasePath();
-        const depth = getDepthLevel();
         
-        // Construir la ruta correcta según el nivel de profundidad
-        let componentPath;
-        if (depth === 0) {
-            // En la raíz (index.html)
-            componentPath = `${basePath}/src/components/${file}`;
-        } else if (depth === 1) {
-            // En una subcarpeta (pages/contacto.html)
-            componentPath = `${basePath ? basePath : '..'}/src/components/${file}`;
-        } else {
-            // En subcarpetas anidadas (pages/servicios/administrativo.html)
-            const prefix = '../'.repeat(depth);
-            componentPath = `${prefix}src/components/${file}`;
-        }
+        // En GitHub Pages siempre usar rutas absolutas con basePath
+        // En local, usar rutas relativas desde la raíz
+        const componentPath = `${basePath}/src/components/${file}`;
 
         const res = await fetch(componentPath);
         if (!res.ok) throw new Error(`Error 404: ${componentPath} no encontrado.`);
@@ -92,13 +65,16 @@ function fixLogoRoutes(container, basePath) {
 function loadScript(src) {
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
-        // Si es un CDN, déjalo como está. Si es local, ajusta la ruta base.
+        const basePath = getBasePath();
+        
+        // Si es un CDN, déjalo como está
         if (src.startsWith('http')) {
             script.src = src;
         } else {
-            const basePath = getBasePath();
+            // Usar rutas absolutas con basePath
             script.src = `${basePath}/${src}`;
         }
+        
         script.onload = () => resolve();
         script.onerror = () => reject(new Error(`Error al cargar el script ${src}`));
         document.body.appendChild(script);
@@ -122,30 +98,19 @@ async function main() {
 
     // 2. Cargar scripts solo si no están ya cargados
     try {
-        const depth = getDepthLevel();
         const scriptsToLoad = [];
         
         // Solo cargar route-handler si no está ya cargado
         if (!window.routeHandlerLoaded) {
-            const prefix = depth > 0 ? '../'.repeat(depth) : '';
-            scriptsToLoad.push(loadScript(`${prefix}src/scripts/route-handler.js`));
+            scriptsToLoad.push(loadScript("src/scripts/route-handler.js"));
         }
         
         // Cargar otros scripts necesarios
-        if (depth > 0) {
-            const prefix = '../'.repeat(depth);
-            scriptsToLoad.push(
-                loadScript(`${prefix}src/scripts/navbar.js`),
-                loadScript(`${prefix}src/scripts/sidebar.js`),
-                loadScript(`${prefix}src/scripts/counters.js`)
-            );
-        } else {
-            scriptsToLoad.push(
-                loadScript("src/scripts/navbar.js"),
-                loadScript("src/scripts/sidebar.js"),
-                loadScript("src/scripts/counters.js")
-            );
-        }
+        scriptsToLoad.push(
+            loadScript("src/scripts/navbar.js"),
+            loadScript("src/scripts/sidebar.js"),
+            loadScript("src/scripts/counters.js")
+        );
         
         await Promise.all(scriptsToLoad);
         
