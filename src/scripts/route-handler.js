@@ -8,9 +8,11 @@ window.routeHandlerLoaded = true;
 
 function getBasePath() {
     const path = window.location.pathname;
-    // Si la URL contiene /bufete/, es GitHub Pages
-    if (path.includes('/bufete/')) {
-        return '/bufete';
+    const hostname = window.location.hostname;
+    
+    // Si estamos en GitHub Pages (hostname contiene github.io)
+    if (hostname.includes('github.io')) {
+        return '/buffete';
     }
     return '';
 }

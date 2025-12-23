@@ -16,8 +16,8 @@ function getBasePath() {
     
     // Si estamos en GitHub Pages (hostname contiene github.io)
     if (hostname.includes('github.io')) {
-        console.log('✅ Detectado GitHub Pages - usando /bufete');
-        return '/bufete';
+        console.log('✅ Detectado GitHub Pages - usando /buffete');
+        return '/buffete';
     }
     
     console.log('✅ Detectado desarrollo local - sin prefijo');
