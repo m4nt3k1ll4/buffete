@@ -5,9 +5,9 @@
  */
 function getBasePath() {
     const path = window.location.pathname;
-    // Si la URL contiene /buffete/, es GitHub Pages
-    if (path.includes('/buffete/')) {
-        return '/buffete';
+    // Si la URL contiene /bufete/, es GitHub Pages
+    if (path.includes('/bufete/')) {
+        return '/bufete';
     }
     return '';
 }

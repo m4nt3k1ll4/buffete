@@ -1,13 +1,13 @@
 /**
  * Manejador de rutas - Corrige todas las rutas relativas para GitHub Pages
- * Detecta si estamos en GitHub Pages (/buffete/) o en local
+ * Detecta si estamos en GitHub Pages (/bufete/) o en local
  */
 
 function getBasePath() {
     const path = window.location.pathname;
-    // Si la URL contiene /buffete/, es GitHub Pages
-    if (path.includes('/buffete/')) {
-        return '/buffete';
+    // Si la URL contiene /bufete/, es GitHub Pages
+    if (path.includes('/bufete/')) {
+        return '/bufete';
     }
     return '';
 }
@@ -39,7 +39,7 @@ function normalizeLink(href) {
 
 /**
  * Normaliza rutas de imágenes solo en GitHub Pages
- * Convierte rutas absolutas a rutas con basePath para /buffete/
+ * Convierte rutas absolutas a rutas con basePath para /bufete/
  */
 function normalizeImageSrc(src) {
     // Si ya es un protocolo completo o data URI, déjalo como está
@@ -49,9 +49,9 @@ function normalizeImageSrc(src) {
 
     const basePath = getBasePath();
     
-    // Solo en GitHub Pages (/buffete/) se necesita normalizar
+    // Solo en GitHub Pages (/bufete/) se necesita normalizar
     if (basePath && src.startsWith('/assets/')) {
-        // /assets/images/administrativo.jpg → /buffete/assets/images/administrativo.jpg
+        // /assets/images/administrativo.jpg → /bufete/assets/images/administrativo.jpg
         return basePath + src;
     }
 
