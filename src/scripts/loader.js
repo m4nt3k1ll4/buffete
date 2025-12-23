@@ -5,10 +5,22 @@
  */
 function getBasePath() {
     const path = window.location.pathname;
-    // Si la URL contiene /bufete/, es GitHub Pages
-    if (path.includes('/bufete/')) {
+    const hostname = window.location.hostname;
+    
+    // Debug para ver qué estamos detectando
+    console.log('🔍 Detectando entorno:', {
+        hostname,
+        pathname: path,
+        fullURL: window.location.href
+    });
+    
+    // Si estamos en GitHub Pages (hostname contiene github.io)
+    if (hostname.includes('github.io')) {
+        console.log('✅ Detectado GitHub Pages - usando /bufete');
         return '/bufete';
     }
+    
+    console.log('✅ Detectado desarrollo local - sin prefijo');
     return '';
 }
 
