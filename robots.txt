@@ -1,4 +1,4 @@
-# Robots.txt para Quiroga Abogados
+# Robots.txt para Quiroga Abogados y Contadores Asociados
 # Permite a todos los buscadores indexar el sitio
 
 User-agent: *
