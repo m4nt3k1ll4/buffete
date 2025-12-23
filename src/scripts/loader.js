@@ -38,11 +38,14 @@ async function loadComponent(id, file) {
         // En GitHub Pages siempre usar rutas absolutas con basePath
         // En local, usar rutas relativas desde la raíz
         const componentPath = `${basePath}/src/components/${file}`;
+        
+        console.log(`📦 Cargando componente: ${file} desde ${componentPath}`);
 
         const res = await fetch(componentPath);
         if (!res.ok) throw new Error(`Error 404: ${componentPath} no encontrado.`);
 
         el.innerHTML = await res.text();
+        console.log(`✅ Componente ${file} cargado exitosamente`);
         
         // Corregir rutas de logos después de cargar el HTML
         fixLogoRoutes(el, basePath);
